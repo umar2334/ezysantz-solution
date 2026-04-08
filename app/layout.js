@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 
 export const metadata = {
   title: {
-    default: "Ezysantz Solution — Full Stack, Mobile & WordPress Development",
+    default: "Ezysantz Solution",
     template: "%s | Ezysantz Solution",
   },
   description:
