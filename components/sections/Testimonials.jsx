@@ -3,7 +3,7 @@ import { tokens } from "@/styles/tokens";
 import { FadeUp, TextReveal, MagneticBtn } from "@/components/ui";
 
 const REVIEWS = [
-  { name: "Ahmed Raza", role: "Startup Founder", quote: "Umar delivered our web app exactly as we envisioned. Clean code, great communication, and on time. Highly recommended!" },
+  { name: "Ahmed Raza", role: "Startup Founder", quote: "Ezysantz Solution delivered our web app exactly as we envisioned. Clean code, great communication, and on time. Highly recommended!" },
   { name: "Sarah Johnson", role: "Small Business Owner", quote: "Our WordPress site went from slow and outdated to fast and beautiful. The team was patient and responsive throughout." },
   { name: "Ali Hassan", role: "Freelance Client", quote: "They built our mobile app from scratch and handled everything — design, backend, deployment. Truly professional team." },
   { name: "Fatima Malik", role: "E-commerce Owner", quote: "WooCommerce customization was done perfectly. Every feature I asked for was implemented without any issues." },
