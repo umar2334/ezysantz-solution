@@ -3,10 +3,10 @@ import { tokens } from "@/styles/tokens";
 import { useInView, useCounter } from "@/hooks";
 
 const STATS = [
-  { num: 300, prefix: "$", suffix: "m", label: "In funding clients raised owing to our design work" },
-  { num: 60, prefix: "", suffix: "+", label: "World's biggest international design awards won" },
-  { num: 100, prefix: "", suffix: "M", label: "Active users experiencing our design every day" },
-  { num: 24, prefix: "", suffix: "%", label: "Of marketing budgets converted into sales with our branding" },
+  { num: 10, prefix: "", suffix: "+", label: "Projects successfully delivered for clients worldwide" },
+  { num: 3, prefix: "", suffix: "+", label: "Years of hands-on development & design experience" },
+  { num: 100, prefix: "", suffix: "%", label: "Client satisfaction — we don't stop until you're happy" },
+  { num: 24, prefix: "", suffix: "h", label: "Average response time when you reach out to us" },
 ];
 
 function StatItem({ stat, index, visible }) {
