@@ -3,21 +3,19 @@ import { tokens } from "@/styles/tokens";
 import { FadeUp, TextReveal } from "@/components/ui";
 
 const AWARDS = [
-  { org: "Awwwards", project: "Fitonist", award: "Site of the Day", date: "Aug 2024", color: "#c8ff00" },
-  { org: "TheFWA", project: "Fitonist", award: "FWA of the Day", date: "Jul 2024", color: "#4cc9f0" },
-  { org: "Awwwards", project: "FinanceAble", award: "Honorable Mention", date: "Mar 2024", color: "#c8ff00" },
-  { org: "TheFWA", project: "Deed Delivery", award: "FWA of the Day", date: "Dec 2023", color: "#4cc9f0" },
-  { org: "CssDA", project: "EventBeds", award: "Website of the Day", date: "Dec 2023", color: "#f97316" },
-  { org: "Awwwards", project: "Mota", award: "Honorable Mention", date: "Nov 2023", color: "#c8ff00" },
-  { org: "CssDA", project: "Dstafin", award: "Website of the Day", date: "Aug 2023", color: "#f97316" },
-  { org: "CssDA", project: "KMBCH", award: "Website of the Day", date: "Feb 2023", color: "#f97316" },
+  { org: "Meta", project: "AppNACV", award: "Full Stack Web App", date: "2025", color: "#c8ff00" },
+  { org: "Vercel", project: "Finance Visualizer", award: "Finance Dashboard App", date: "2025", color: "#4cc9f0" },
+  { org: "Firebase", project: "BaaS Integration", award: "Cloud Backend Setup", date: "2024", color: "#f97316" },
+  { org: "WordPress", project: "Client Website", award: "Custom Theme Development", date: "2024", color: "#06d6a0" },
+  { org: "React Native", project: "Mobile Project", award: "Cross-Platform Mobile App", date: "2024", color: "#ec4899" },
+  { org: "WooCommerce", project: "E-Commerce Store", award: "Custom Plugin Development", date: "2023", color: "#8b5cf6" },
 ];
 
 export default function Awards() {
   return (
     <section style={{ padding: tokens.sectionPadding, maxWidth: tokens.maxW, margin: "0 auto" }}>
       <FadeUp>
-        <TextReveal text="Awards for digital innovation" style={{
+        <TextReveal text="Projects & work we've delivered" style={{
           fontFamily: tokens.font, fontWeight: 800,
           fontSize: "clamp(30px, 4.5vw, 52px)",
           color: tokens.white, letterSpacing: "-0.03em", marginBottom: 52,

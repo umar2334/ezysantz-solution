@@ -4,16 +4,16 @@ import { tokens } from "@/styles/tokens";
 import { FadeUp, TextReveal } from "@/components/ui";
 
 const FAQS = [
-  { q: "How long does it take to get started?", a: "Our turnaround is lightning-fast. Just one week from signing off and we're there with the kick-off meeting to get it rolling." },
-  { q: "What is your typical working process?", a: "We always start a project with analysis, learning the requirements, and making estimates that will be shared in the price proposal. Then it's off to signing off, kicking off, and getting your business to the next level with a pinch of our design magic." },
-  { q: "Do you work on a fixed-price basis or time and material?", a: "Flexibility is the key of success. We try to suggest an appropriate solution for each specific case. The more clear and detailed the requirements are, the more accurate our estimates will be." },
-  { q: "How do you usually start new collaborations?", a: "Each new engagement starts with an introduction call and filling out the design/branding brief. If you have a cool project in mind, feel free to get in touch!" },
-  { q: "Do you work with big companies only?", a: "We're all for building a borderless world, so we are open to working with any project we come across. We believe in startups and one of those we helped develop from scratch has been successfully acquired." },
-  { q: "How long it will take to get an estimate?", a: "We hate to keep you waiting. Setting up a team, making preliminary research and analysis, and getting back with the contract will take up to 24 hours. Efficiency is one of our key values." },
-  { q: "Do you have a minimum engagement?", a: "We set no entry thresholds. But we believe a product can't be designed within a couple of days. We need time to research, analyze and strategize. Our minimum project duration is 30 hours." },
-  { q: "What's the average project duration?", a: "Our team works full-time on every project, so the overall duration depends on the initial estimate. On average, our projects last from 2 weeks to 5 months." },
-  { q: "Can we start design without wireframes?", a: "Wireframes help build UX without distractions. It's an essential part of the design process. Having everything polished at the wireframing stage saves both time and money." },
-  { q: "What templates does Outcrowd use?", a: "We don't use pre-built templates or kits because there's no soul in them. We're committed to building fully customized, product-based solutions. Each pixel is designed with love and passion." },
+  { q: "How quickly can you get started on my project?", a: "Very quickly. Once we understand your requirements, we send a proposal within 24 hours. After approval we can kick off within 2–3 days." },
+  { q: "What is your working process?", a: "We start with a discovery call to understand your goals. Then we plan, design, develop, and test — keeping you updated at every step. After delivery we provide support to make sure everything runs smoothly." },
+  { q: "Do you work on fixed price or hourly basis?", a: "Both. For well-defined projects we prefer fixed price so you know the exact cost upfront. For ongoing or flexible projects, we work hourly. We'll suggest what fits your situation best." },
+  { q: "How do we communicate during the project?", a: "We stay in touch via WhatsApp, email, or whatever you prefer. You'll get regular updates and can always reach us directly — no middlemen, no delays." },
+  { q: "Do you work with small businesses and startups?", a: "Absolutely. We love working with startups and small businesses. Whether you have a big idea or a small fix, we're happy to help. No project is too small for us." },
+  { q: "How long does it take to get an estimate?", a: "We get back with a detailed estimate within 24 hours. Just send us your requirements via the contact form or WhatsApp and we'll take it from there." },
+  { q: "What technologies do you use?", a: "We work with Next.js, React, Node.js, React Native, WordPress, Firebase, Supabase, MongoDB, PostgreSQL, Tailwind CSS, and more. We choose the best stack for your specific project." },
+  { q: "Do you provide support after the project is delivered?", a: "Yes. We offer post-launch support for bug fixes, updates, and new features. We don't disappear after delivery — we're here for the long term." },
+  { q: "Can you work with an existing codebase?", a: "Yes, we can jump into an existing project, fix issues, add features, or refactor code. We take time to understand the existing work before making any changes." },
+  { q: "How do I get started with Ezysantz Solution?", a: "Simply fill out the contact form on our website or reach out directly at umarfreelancerweb@gmail.com. We'll schedule a quick call and take it from there." },
 ];
 
 export default function FAQ() {

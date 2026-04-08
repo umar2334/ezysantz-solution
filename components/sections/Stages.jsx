@@ -4,9 +4,9 @@ import { tokens } from "@/styles/tokens";
 import { FadeUp, TextReveal, TiltCard } from "@/components/ui";
 
 const STAGES = [
-  { tag: "01", title: "Pre-seed Bootstrapped", desc: "This is POC stage. You have a hypothetical product idea, you want it done & tested properly to know whether it's worth the time and resources.", highlight: "More than 40% of our clients on this stage get initial investment for MVPs", color: "#c8ff00" },
-  { tag: "02", title: "Seed", desc: "This is an MVP stage. You approved a product-market fit and want to start working with real users, and start initial marketing efforts.", highlight: "More than 25% of our clients get Series A investments to build full-scale product", color: "#06d6a0" },
-  { tag: "03", title: "Series A", desc: "This is a product optimisation stage. You raised the investment and faced burn-rates while expanding further.", highlight: "We've helped every start-up at this stage to cut costs and improve user experience", color: "#4cc9f0" },
+  { tag: "01", title: "Discovery & Planning", desc: "We start by understanding your business goals, target audience, and project requirements. We then create a clear roadmap with timelines, tech stack, and cost estimates — no surprises.", highlight: "✦ You get a detailed proposal within 24 hours of your first message", color: "#c8ff00" },
+  { tag: "02", title: "Design & Development", desc: "Our team gets to work — designing, building, and testing your product iteratively. You stay in the loop at every stage with regular updates and demos.", highlight: "✦ Weekly progress updates so you always know where things stand", color: "#06d6a0" },
+  { tag: "03", title: "Launch & Support", desc: "We deploy your project, handle all technical setup, and make sure everything runs smoothly. Post-launch support is always available — we don't disappear after delivery.", highlight: "✦ Ongoing support & maintenance available after every project", color: "#4cc9f0" },
 ];
 
 export default function Stages() {
@@ -15,7 +15,7 @@ export default function Stages() {
   return (
     <section style={{ padding: tokens.sectionPadding, maxWidth: tokens.maxW, margin: "0 auto" }}>
       <FadeUp>
-        <TextReveal text="Stages of startup development" style={{
+        <TextReveal text="How we work with you" style={{
           fontFamily: tokens.font, fontWeight: 800,
           fontSize: "clamp(30px, 4.5vw, 52px)",
           color: tokens.white, letterSpacing: "-0.03em", marginBottom: 14,
@@ -26,8 +26,8 @@ export default function Stages() {
           fontFamily: tokens.fontBody, fontSize: 17, color: tokens.gray,
           maxWidth: 560, marginBottom: 56, lineHeight: 1.65,
         }}>
-          Examples of our most common engagement models into early-stage
-          start-ups on different stages of the lifecycle.
+          A simple, transparent process from first message to final delivery —
+          so you always know what's happening and what's next.
         </p>
       </FadeUp>
 

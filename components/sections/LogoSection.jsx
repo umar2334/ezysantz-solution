@@ -2,7 +2,7 @@
 import { tokens } from "@/styles/tokens";
 import { FadeUp, Marquee } from "@/components/ui";
 
-const LOGOS = ["Google", "Microsoft", "Uber", "Spotify", "Airbnb", "Meta", "Amazon", "Tesla"];
+const LOGOS = ["Next.js", "React", "Node.js", "WordPress", "Firebase", "React Native", "Tailwind CSS", "MongoDB", "PostgreSQL", "AWS", "Vercel", "TypeScript"];
 
 export default function LogoSection() {
   return (
@@ -11,7 +11,7 @@ export default function LogoSection() {
         <p style={{
           fontFamily: tokens.fontBody, fontSize: 14, color: tokens.gray,
         }}>
-          Our design thinking is recognised by enterprises we cooperated with
+          Technologies & tools we use to build your product
         </p>
       </FadeUp>
       <Marquee items={LOGOS} speed={35} />

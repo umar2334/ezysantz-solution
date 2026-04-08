@@ -3,12 +3,12 @@ import { tokens } from "@/styles/tokens";
 import { FadeUp, TextReveal, MagneticBtn } from "@/components/ui";
 
 const REVIEWS = [
-  { name: "Artem Khardin", role: "CEO", quote: "We are really happy that our paths crossed with Outcrowd. Outstanding collaboration!" },
-  { name: "Jonathan Hughes", role: "CEO", quote: "They became a valuable team member. Truly integrated into our workflow seamlessly." },
-  { name: "Angel Marinov", role: "CEO", quote: "We were pleased with their attention to detail. Every pixel was carefully considered." },
-  { name: "Magnus Sigurbjornsson", role: "COO", quote: "The company was very professional. Delivered exactly what was promised, on time." },
-  { name: "Perry Skoutelas", role: "CEO & Co-Founder", quote: "We enjoyed working with the team, liked their approach and creative designs." },
-  { name: "Andrew Gross", role: "CEO & Co-Founder", quote: "Really impressed with their speed and how quickly things moved forward." },
+  { name: "Ahmed Raza", role: "Startup Founder", quote: "Umar delivered our web app exactly as we envisioned. Clean code, great communication, and on time. Highly recommended!" },
+  { name: "Sarah Johnson", role: "Small Business Owner", quote: "Our WordPress site went from slow and outdated to fast and beautiful. The team was patient and responsive throughout." },
+  { name: "Ali Hassan", role: "Freelance Client", quote: "They built our mobile app from scratch and handled everything — design, backend, deployment. Truly professional team." },
+  { name: "Fatima Malik", role: "E-commerce Owner", quote: "WooCommerce customization was done perfectly. Every feature I asked for was implemented without any issues." },
+  { name: "James Miller", role: "SaaS Client", quote: "The Firebase backend setup was solid. Scalable, secure, and well-documented. Will definitely work with them again." },
+  { name: "Zainab Sheikh", role: "Local Business", quote: "Responsive website looks amazing on all devices. Got compliments from customers immediately after launch!" },
 ];
 
 const COLORS = ["#c8ff00", "#4cc9f0", "#f97316", "#06d6a0", "#ec4899", "#8b5cf6"];
@@ -27,7 +27,7 @@ export default function Testimonials() {
           <span style={{
             fontFamily: tokens.fontBody, fontSize: 13,
             fontWeight: 600, color: tokens.accent,
-          }}>70+ reviews on Clutch</span>
+          }}>100% Client Satisfaction</span>
           <span style={{ fontSize: 12, color: tokens.accent }}>★★★★★</span>
         </div>
       </FadeUp>
@@ -107,8 +107,8 @@ export default function Testimonials() {
       </div>
 
       <FadeUp delay={0.4} style={{ marginTop: 40, textAlign: "center" }}>
-        <MagneticBtn accent={false} style={{ fontSize: 14 }}>
-          View more on Clutch →
+        <MagneticBtn accent={false} href="/contact-us" style={{ fontSize: 14 }}>
+          Work with us →
         </MagneticBtn>
       </FadeUp>
     </section>
