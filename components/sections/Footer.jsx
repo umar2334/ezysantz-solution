@@ -72,7 +72,7 @@ export default function Footer() {
             onMouseEnter={(e) => (e.target.style.color = tokens.accent)}
             onMouseLeave={(e) => (e.target.style.color = tokens.gray)}
           >
-          umarfreelancerweb@gmail.com
+          hello@ezysantz.com
           </a>
 
           <div style={{ display: "flex", gap: 10, marginTop: 20 }}>

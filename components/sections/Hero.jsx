@@ -81,7 +81,7 @@ export default function Hero() {
           <span style={{
             fontFamily: tokens.fontBody, fontSize: 13, color: tokens.accent,
             textTransform: "uppercase", letterSpacing: "0.12em", fontWeight: 600,
-          }}>Digital brand design agency</span>
+          }}>Software Agency — Islamabad, Pakistan</span>
         </div>
       </div>
 
@@ -94,13 +94,13 @@ export default function Hero() {
         transform: loaded ? "translateY(0)" : "translateY(40px)",
         transition: `all 1s 0.35s ${tokens.ease}`,
       }}>
-        Design <span style={{ color: tokens.accent }}>&amp;</span> Brand<br />
-        Acceleration for<br />
+        Web &amp; Mobile Apps<br />
+        Built for<br />
         <span style={{
           background: `linear-gradient(135deg, ${tokens.accent}, #a0e000)`,
           WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
           backgroundClip: "text",
-        }}>SaaS Startups</span>
+        }}>Your Business</span>
       </h1>
 
       {/* Subtitle */}
@@ -112,8 +112,8 @@ export default function Hero() {
         transform: loaded ? "translateY(0)" : "translateY(30px)",
         transition: `all 0.9s 0.55s ${tokens.ease}`,
       }}>
-        We prove, design, implement, and market your idea with absolute
-        transparency and efficiency at its core
+        Full Stack Development, Mobile Apps, WordPress & Cloud Solutions —
+        delivered by a trusted software agency based in Pakistan
       </p>
 
       {/* CTA Buttons */}

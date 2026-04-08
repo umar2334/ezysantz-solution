@@ -13,7 +13,7 @@ const FAQS = [
   { q: "What technologies do you use?", a: "We work with Next.js, React, Node.js, React Native, WordPress, Firebase, Supabase, MongoDB, PostgreSQL, Tailwind CSS, and more. We choose the best stack for your specific project." },
   { q: "Do you provide support after the project is delivered?", a: "Yes. We offer post-launch support for bug fixes, updates, and new features. We don't disappear after delivery — we're here for the long term." },
   { q: "Can you work with an existing codebase?", a: "Yes, we can jump into an existing project, fix issues, add features, or refactor code. We take time to understand the existing work before making any changes." },
-  { q: "How do I get started with Ezysantz Solution?", a: "Simply fill out the contact form on our website or reach out directly at umarfreelancerweb@gmail.com. We'll schedule a quick call and take it from there." },
+  { q: "How do I get started with Ezysantz Solution?", a: "Simply fill out the contact form on our website or reach out directly at hello@ezysantz.com. We'll schedule a quick call and take it from there." },
 ];
 
 export default function FAQ() {
