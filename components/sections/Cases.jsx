@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import { tokens } from "@/styles/tokens";
 import { FadeUp, TextReveal } from "@/components/ui";
 
@@ -8,6 +9,8 @@ const CASES = [
     iconBg: "#6366f1",
     name: "APNNCV",
     desc: "Resume Builder — for job seekers & professionals.",
+    fullDesc: "A modern SaaS platform to simplify creating professional, ATS-friendly resumes. Empowers job seekers to build high-quality CVs in minutes.",
+    features: ["Secure Login UI", "Professional Templates", "ATS Optimization", "PDF & DOCX Export"],
     tags: [
       { label: "React", color: "#6366f1", bg: "#6366f118" },
       { label: "Web", color: "#0ea5e9", bg: "#0ea5e918" },
@@ -20,7 +23,8 @@ const CASES = [
     ],
     btnLabel: "View Demo",
     demoLink: "https://apnnacv.vercel.app/",
-    liveLink: "https://apnnacv.vercel.app/",
+    githubLink: null,
+    image: "/projects/apnacv.png",
     accentColor: "#6366f1",
   },
   {
@@ -28,6 +32,8 @@ const CASES = [
     iconBg: "#22c55e",
     name: "Finance App",
     desc: "Expense Tracker — budget visualization & insights.",
+    fullDesc: "Modern application for seamless personal expense management and budget visualization. Track spending, set budgets, and view financial trends.",
+    features: ["Interactive Charts", "Real-Time Sync", "Budget Tools", "Financial Trends"],
     tags: [
       { label: "Flutter", color: "#06b6d4", bg: "#06b6d418" },
       { label: "Android", color: "#22c55e", bg: "#22c55e18" },
@@ -40,7 +46,8 @@ const CASES = [
     ],
     btnLabel: "View Demo",
     demoLink: "https://personal-finance-visualizer-ochre-psi.vercel.app/",
-    liveLink: "https://personal-finance-visualizer-ochre-psi.vercel.app/",
+    githubLink: null,
+    image: "/projects/finance.png",
     accentColor: "#22c55e",
   },
   {
@@ -48,6 +55,8 @@ const CASES = [
     iconBg: "#0ea5e9",
     name: "E-Commerce UI",
     desc: "Responsive Storefront — clean product layout.",
+    fullDesc: "Modern and responsive e-commerce front-end with clean product layout and smooth UI. Built with pure HTML, CSS, and JavaScript.",
+    features: ["Product Grid Layout", "Responsive Design", "Clean Architecture", "Fast Load Time"],
     tags: [
       { label: "HTML", color: "#f97316", bg: "#f9731618" },
       { label: "CSS", color: "#0ea5e9", bg: "#0ea5e918" },
@@ -60,7 +69,8 @@ const CASES = [
     ],
     btnLabel: "View Demo",
     demoLink: "https://umar2334.github.io/project-1-umar-store/",
-    liveLink: "https://umar2334.github.io/project-1-umar-store/",
+    githubLink: "https://github.com/umar2334/project-1-umar-store",
+    image: null,
     accentColor: "#0ea5e9",
   },
   {
@@ -68,6 +78,8 @@ const CASES = [
     iconBg: "#f59e0b",
     name: "Ghumo",
     desc: "Pakistan Travel Explorer — maps, trails & expeditions.",
+    fullDesc: "Flutter travel app for exploring Pakistan — featuring real interactive maps, offline route download, directions, and live weather updates.",
+    features: ["Interactive Maps", "Offline Route Download", "Turn-by-Turn Directions", "Live Weather"],
     tags: [
       { label: "Flutter", color: "#06b6d4", bg: "#06b6d418" },
       { label: "Android", color: "#22c55e", bg: "#22c55e18" },
@@ -80,7 +92,8 @@ const CASES = [
     ],
     btnLabel: "Download APK",
     demoLink: "https://github.com/umar2334/Ghumo/releases/download/v1.0.0/Ghumo-v1.0.0.apk",
-    liveLink: "https://github.com/umar2334/Ghumo",
+    githubLink: "https://github.com/umar2334/Ghumo",
+    image: null,
     accentColor: "#f59e0b",
   },
   {
@@ -88,6 +101,8 @@ const CASES = [
     iconBg: "#3b82f6",
     name: "Society Management",
     desc: "Resident & Admin Portal — Karim Nagar Colony.",
+    fullDesc: "Android app for managing society residents and admin operations. Features secure login, resident portal, admin dashboard, and announcements.",
+    features: ["Resident & Admin Login", "Society Announcements", "Admin Dashboard", "APK v1.0.27 Live"],
     tags: [
       { label: "Flutter", color: "#06b6d4", bg: "#06b6d418" },
       { label: "Dart", color: "#3b82f6", bg: "#3b82f618" },
@@ -100,12 +115,175 @@ const CASES = [
     ],
     btnLabel: "Download APK",
     demoLink: "https://github.com/umar2334/society-managment-app/releases/download/v1.0.27/society-management-v1.0.27.apk",
-    liveLink: "https://github.com/umar2334/society-managment-app",
+    githubLink: "https://github.com/umar2334/society-managment-app",
+    image: null,
     accentColor: "#3b82f6",
   },
 ];
 
+function ProjectModal({ project, onClose }) {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    const onKey = (e) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [onClose]);
+
+  return (
+    <div
+      onClick={onClose}
+      style={{
+        position: "fixed", inset: 0, zIndex: 1000,
+        background: "rgba(0,0,0,0.75)",
+        backdropFilter: "blur(6px)",
+        display: "flex", alignItems: "center", justifyContent: "center",
+        padding: "20px",
+      }}
+    >
+      <div
+        onClick={e => e.stopPropagation()}
+        style={{
+          background: "#131316",
+          border: `1px solid ${project.accentColor}33`,
+          borderRadius: 20,
+          width: "100%", maxWidth: 480,
+          maxHeight: "90vh", overflowY: "auto",
+          boxShadow: `0 32px 80px ${project.accentColor}22, 0 0 0 1px ${project.accentColor}22`,
+        }}
+      >
+        {/* Image / Header */}
+        <div style={{ position: "relative", height: 200, overflow: "hidden", borderRadius: "20px 20px 0 0" }}>
+          {project.image ? (
+            <img
+              src={project.image}
+              alt={project.name}
+              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }}
+            />
+          ) : (
+            <div style={{
+              width: "100%", height: "100%",
+              background: `linear-gradient(135deg, ${project.accentColor}22, ${project.accentColor}08, #131316)`,
+              display: "flex", alignItems: "center", justifyContent: "center",
+              fontSize: 64,
+            }}>
+              {project.icon}
+            </div>
+          )}
+          {/* Gradient overlay */}
+          <div style={{
+            position: "absolute", inset: 0,
+            background: "linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.75) 100%)",
+          }} />
+          {/* Back button */}
+          <button
+            onClick={onClose}
+            style={{
+              position: "absolute", top: 16, left: 16,
+              background: "rgba(0,0,0,0.55)", backdropFilter: "blur(8px)",
+              border: "1px solid rgba(255,255,255,0.12)",
+              borderRadius: 10, color: "#f5f5f7",
+              fontFamily: tokens.fontBody, fontWeight: 600, fontSize: 13,
+              padding: "7px 14px", cursor: "pointer",
+              display: "flex", alignItems: "center", gap: 6,
+            }}
+          >← Back</button>
+          {/* Title on image */}
+          <span style={{
+            position: "absolute", bottom: 16, left: 20,
+            fontFamily: tokens.font, fontWeight: 700, fontSize: 22,
+            color: "#fff", letterSpacing: "-0.02em",
+          }}>{project.name}</span>
+        </div>
+
+        {/* Content */}
+        <div style={{ padding: "24px 28px 28px" }}>
+          {/* Tags */}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 18 }}>
+            {project.tags.map((tag, i) => (
+              <span key={i} style={{
+                fontFamily: tokens.fontBody, fontSize: 12, fontWeight: 600,
+                color: tag.color, background: tag.bg,
+                border: `1px solid ${tag.color}30`,
+                borderRadius: 6, padding: "4px 10px",
+                letterSpacing: "0.04em",
+              }}>{tag.label}</span>
+            ))}
+          </div>
+
+          {/* Description */}
+          <p style={{
+            fontFamily: tokens.fontBody, fontSize: 14,
+            color: tokens.gray, lineHeight: 1.75, marginBottom: 22,
+          }}>{project.fullDesc}</p>
+
+          {/* Features */}
+          <ul style={{ listStyle: "none", padding: 0, margin: "0 0 28px" }}>
+            {project.features.map((f, i) => (
+              <li key={i} style={{
+                fontFamily: tokens.fontBody, fontSize: 13,
+                color: tokens.gray, marginBottom: 8,
+                display: "flex", gap: 10, alignItems: "flex-start",
+              }}>
+                <span style={{ color: project.accentColor, fontWeight: 800, flexShrink: 0 }}>→</span>
+                {f}
+              </li>
+            ))}
+          </ul>
+
+          {/* Buttons */}
+          <div style={{ display: "flex", gap: 10 }}>
+            <a
+              href={project.demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                textDecoration: "none",
+                background: project.accentColor,
+                color: "#000",
+                fontFamily: tokens.fontBody, fontWeight: 700, fontSize: 14,
+                padding: "12px 24px", borderRadius: 12,
+                flex: 1, textAlign: "center", display: "block",
+                transition: "opacity 0.2s",
+              }}
+              onMouseEnter={e => e.currentTarget.style.opacity = "0.85"}
+              onMouseLeave={e => e.currentTarget.style.opacity = "1"}
+            >
+              {project.btnLabel === "Download APK" ? "Download APK ↓" : "View Live Demo →"}
+            </a>
+            {project.githubLink && (
+              <a
+                href={project.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  textDecoration: "none",
+                  border: `1px solid ${tokens.borderLight}`,
+                  color: tokens.white,
+                  fontFamily: tokens.fontBody, fontWeight: 600, fontSize: 14,
+                  padding: "12px 20px", borderRadius: 12,
+                  display: "inline-flex", alignItems: "center", gap: 8,
+                  transition: "border-color 0.2s",
+                  whiteSpace: "nowrap",
+                }}
+                onMouseEnter={e => e.currentTarget.style.borderColor = project.accentColor + "66"}
+                onMouseLeave={e => e.currentTarget.style.borderColor = tokens.borderLight}
+              >
+                GitHub
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Cases() {
+  const [activeProject, setActiveProject] = useState(null);
+
   return (
     <section style={{ padding: tokens.sectionPadding, maxWidth: tokens.maxW, margin: "0 auto" }}>
       <FadeUp>
@@ -153,7 +331,7 @@ export default function Cases() {
                 e.currentTarget.style.boxShadow = "none";
               }}
             >
-              {/* Header: icon + name + desc */}
+              {/* Header */}
               <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: 14,
@@ -167,8 +345,7 @@ export default function Cases() {
                 <div>
                   <h3 style={{
                     fontFamily: tokens.font, fontWeight: 700, fontSize: 18,
-                    color: tokens.white, letterSpacing: "-0.02em",
-                    marginBottom: 4,
+                    color: tokens.white, letterSpacing: "-0.02em", marginBottom: 4,
                   }}>{c.name}</h3>
                   <p style={{
                     fontFamily: tokens.fontBody, fontSize: 13,
@@ -177,7 +354,7 @@ export default function Cases() {
                 </div>
               </div>
 
-              {/* Tech tags */}
+              {/* Tags */}
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                 {c.tags.map((tag, ti) => (
                   <span key={ti} style={{
@@ -190,10 +367,9 @@ export default function Cases() {
                 ))}
               </div>
 
-              {/* Divider */}
               <div style={{ height: 1, background: tokens.border }} />
 
-              {/* Stats row */}
+              {/* Stats */}
               <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}>
                 {c.stats.map((stat, si) => (
                   <div key={si} style={{ textAlign: "center", flex: 1 }}>
@@ -209,67 +385,59 @@ export default function Cases() {
                 ))}
               </div>
 
-              {/* Divider */}
               <div style={{ height: 1, background: tokens.border }} />
 
-              {/* Action buttons */}
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
-                  <a href={c.demoLink} target="_blank" rel="noopener noreferrer" style={{
+              {/* Buttons */}
+              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <a
+                  href={c.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
                     textDecoration: "none",
                     background: c.accentColor,
                     color: "#000",
-                    fontFamily: tokens.fontBody,
-                    fontWeight: 700,
-                    fontSize: 13,
-                    padding: "10px 22px",
-                    borderRadius: 10,
+                    fontFamily: tokens.fontBody, fontWeight: 700, fontSize: 13,
+                    padding: "10px 22px", borderRadius: 10,
                     letterSpacing: "0.01em",
                     transition: "opacity 0.2s",
-                    flex: 1,
-                    textAlign: "center",
-                    display: "block",
+                    flex: 1, textAlign: "center", display: "block",
                   }}
-                    onMouseEnter={e => e.currentTarget.style.opacity = "0.85"}
-                    onMouseLeave={e => e.currentTarget.style.opacity = "1"}
-                  >{c.btnLabel}</a>
+                  onMouseEnter={e => e.currentTarget.style.opacity = "0.85"}
+                  onMouseLeave={e => e.currentTarget.style.opacity = "1"}
+                >{c.btnLabel}</a>
 
-                {c.liveLink !== "#" ? (
-                  <a href={c.liveLink} target="_blank" rel="noopener noreferrer" style={{
-                    textDecoration: "none",
+                <button
+                  onClick={() => setActiveProject(c)}
+                  style={{
+                    background: "transparent",
                     fontFamily: tokens.fontBody, fontWeight: 600, fontSize: 13,
                     color: tokens.white,
                     border: `1px solid ${tokens.borderLight}`,
-                    padding: "10px 18px",
-                    borderRadius: 10,
+                    padding: "10px 18px", borderRadius: 10,
+                    cursor: "pointer",
                     display: "inline-flex", alignItems: "center", gap: 6,
                     transition: "border-color 0.2s, color 0.2s",
                     whiteSpace: "nowrap",
                   }}
-                    onMouseEnter={e => {
-                      e.currentTarget.style.borderColor = c.accentColor + "66";
-                      e.currentTarget.style.color = c.accentColor;
-                    }}
-                    onMouseLeave={e => {
-                      e.currentTarget.style.borderColor = tokens.borderLight;
-                      e.currentTarget.style.color = tokens.white;
-                    }}
-                  >Open <span style={{ fontSize: 14 }}>↗</span></a>
-                ) : (
-                  <span style={{
-                    fontFamily: tokens.fontBody, fontWeight: 600, fontSize: 13,
-                    color: tokens.gray,
-                    border: `1px solid ${tokens.border}`,
-                    padding: "10px 18px",
-                    borderRadius: 10,
-                    display: "inline-flex", alignItems: "center", gap: 6,
-                    whiteSpace: "nowrap",
-                  }}>Open <span style={{ fontSize: 14 }}>↗</span></span>
-                )}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.borderColor = c.accentColor + "66";
+                    e.currentTarget.style.color = c.accentColor;
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.borderColor = tokens.borderLight;
+                    e.currentTarget.style.color = tokens.white;
+                  }}
+                >Open <span style={{ fontSize: 14 }}>↗</span></button>
               </div>
             </div>
           </FadeUp>
         ))}
       </div>
+
+      {activeProject && (
+        <ProjectModal project={activeProject} onClose={() => setActiveProject(null)} />
+      )}
     </section>
   );
 }
