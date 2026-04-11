@@ -1,14 +1,108 @@
 "use client";
 import { tokens } from "@/styles/tokens";
-import { FadeUp, TextReveal, TiltCard } from "@/components/ui";
+import { FadeUp, TextReveal } from "@/components/ui";
 
 const CASES = [
-  { name: "AppNACV", desc: "A modern full-stack web application — built and deployed on Vercel with a clean UI and smooth user experience.", color: "#c8ff00", tag: "Full Stack · Web App", link: "https://apnnacv.vercel.app/", image: "/projects/apnacv.png" },
-  { name: "Finance Visualizer", desc: "Personal finance tracking and visualization tool — helps users manage budgets, track expenses, and view spending insights.", color: "#4cc9f0", tag: "Full Stack · Finance", link: "https://personal-finance-visualizer-ochre-psi.vercel.app/login", image: "/projects/finance.png" },
-  { name: "MediTrack", desc: "Cross-platform mobile app for clinic appointment booking, patient records, and doctor-patient messaging on iOS & Android.", color: "#f97316", tag: "Mobile App · Healthcare", link: "#" },
-  { name: "LuxeStay", desc: "High-converting responsive website for a luxury hospitality brand — optimised for all devices and integrated with a booking engine.", color: "#ec4899", tag: "Web Design · Hospitality", link: "#" },
-  { name: "TechBlog WP", desc: "Custom WordPress website with tailored theme, SEO-optimised structure, and a smooth editorial workflow for a growing tech publication.", color: "#8b5cf6", tag: "WordPress · Blog", link: "#" },
-  { name: "WooBoost", desc: "Bespoke WooCommerce plugin extending checkout flow with upsells, discount logic, and custom shipping rules — zero third-party dependency.", color: "#06d6a0", tag: "WP Plugin · WooCommerce", link: "#" },
+  {
+    icon: "📄",
+    iconBg: "#6366f1",
+    name: "APNNCV",
+    desc: "Resume Builder — for job seekers & professionals.",
+    tags: [
+      { label: "React", color: "#6366f1", bg: "#6366f118" },
+      { label: "Web", color: "#0ea5e9", bg: "#0ea5e918" },
+      { label: "Firebase", color: "#f97316", bg: "#f9731618" },
+    ],
+    stats: [
+      { value: "ATS", label: "Optimised" },
+      { value: "3+", label: "Templates" },
+      { value: "PDF", label: "Export" },
+    ],
+    btnLabel: "View Demo",
+    demoLink: "https://apnnacv.vercel.app/",
+    liveLink: "https://apnnacv.vercel.app/",
+    accentColor: "#6366f1",
+  },
+  {
+    icon: "💹",
+    iconBg: "#22c55e",
+    name: "Finance App",
+    desc: "Expense Tracker — budget visualization & insights.",
+    tags: [
+      { label: "Flutter", color: "#06b6d4", bg: "#06b6d418" },
+      { label: "Android", color: "#22c55e", bg: "#22c55e18" },
+      { label: "Web", color: "#8b5cf6", bg: "#8b5cf618" },
+    ],
+    stats: [
+      { value: "4+", label: "Chart Types" },
+      { value: "Live", label: "Sync" },
+      { value: "100%", label: "Privacy" },
+    ],
+    btnLabel: "View Demo",
+    demoLink: "https://personal-finance-visualizer-ochre-psi.vercel.app/",
+    liveLink: "https://personal-finance-visualizer-ochre-psi.vercel.app/",
+    accentColor: "#22c55e",
+  },
+  {
+    icon: "🛍️",
+    iconBg: "#0ea5e9",
+    name: "E-Commerce UI",
+    desc: "Responsive Storefront — clean product layout.",
+    tags: [
+      { label: "HTML", color: "#f97316", bg: "#f9731618" },
+      { label: "CSS", color: "#0ea5e9", bg: "#0ea5e918" },
+      { label: "Web", color: "#6366f1", bg: "#6366f118" },
+    ],
+    stats: [
+      { value: "20+", label: "Products" },
+      { value: "Fast", label: "Load" },
+      { value: "100%", label: "Responsive" },
+    ],
+    btnLabel: "View Demo",
+    demoLink: "https://umar2334.github.io/project-1-umar-store/",
+    liveLink: "https://umar2334.github.io/project-1-umar-store/",
+    accentColor: "#0ea5e9",
+  },
+  {
+    icon: "🗺️",
+    iconBg: "#f59e0b",
+    name: "Ghumo",
+    desc: "Pakistan Travel Explorer — maps, trails & expeditions.",
+    tags: [
+      { label: "Flutter", color: "#06b6d4", bg: "#06b6d418" },
+      { label: "Android", color: "#22c55e", bg: "#22c55e18" },
+      { label: "APK", color: "#f59e0b", bg: "#f59e0b18" },
+    ],
+    stats: [
+      { value: "Live", label: "Weather" },
+      { value: "Maps", label: "Interactive" },
+      { value: "APK", label: "Ready" },
+    ],
+    btnLabel: "Download APK",
+    demoLink: "https://github.com/umar2334/Ghumo/releases/download/v1.0.0/Ghumo-v1.0.0.apk",
+    liveLink: "https://github.com/umar2334/Ghumo",
+    accentColor: "#f59e0b",
+  },
+  {
+    icon: "🏢",
+    iconBg: "#3b82f6",
+    name: "Society Management",
+    desc: "Resident & Admin Portal — Karim Nagar Colony.",
+    tags: [
+      { label: "Flutter", color: "#06b6d4", bg: "#06b6d418" },
+      { label: "Dart", color: "#3b82f6", bg: "#3b82f618" },
+      { label: "Firebase", color: "#f97316", bg: "#f9731618" },
+    ],
+    stats: [
+      { value: "v1.0.27", label: "Version" },
+      { value: "34 MB", label: "APK Size" },
+      { value: "Live", label: "Release" },
+    ],
+    btnLabel: "Download APK",
+    demoLink: "https://github.com/umar2334/society-managment-app/releases/download/v1.0.27/society-management-v1.0.27.apk",
+    liveLink: "https://github.com/umar2334/society-managment-app",
+    accentColor: "#3b82f6",
+  },
 ];
 
 export default function Cases() {
@@ -26,109 +120,153 @@ export default function Cases() {
           fontFamily: tokens.fontBody, fontSize: 17, color: tokens.gray,
           maxWidth: 600, marginBottom: 56, lineHeight: 1.65,
         }}>
-          We think about the big picture and focus primarily on your
-          product's funding & business success.
+          Production-ready apps built with cutting-edge and modern web technologies.
         </p>
       </FadeUp>
 
       <div style={{
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(360px, 1fr))",
+        gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
         gap: 20,
       }}>
         {CASES.map((c, i) => (
           <FadeUp key={i} delay={i * 0.08}>
-            <TiltCard style={{ height: "100%" }}>
-              <a href={c.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "block", height: "100%" }}>
-              <div data-hover style={{
-                borderRadius: tokens.radius, overflow: "hidden",
-                cursor: "pointer", border: `1px solid ${tokens.border}`,
+            <div
+              style={{
                 background: tokens.card,
-                transition: "border-color 0.4s, box-shadow 0.4s",
-                height: "100%", display: "flex", flexDirection: "column",
+                border: `1px solid ${tokens.border}`,
+                borderRadius: tokens.radius,
+                padding: "28px",
+                display: "flex",
+                flexDirection: "column",
+                gap: 20,
+                transition: "border-color 0.3s, box-shadow 0.3s",
+                height: "100%",
+                boxSizing: "border-box",
               }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = c.color + "55";
-                  e.currentTarget.style.boxShadow = `0 16px 48px ${c.color}11`;
-                  const img = e.currentTarget.querySelector("[data-case-img]");
-                  if (img) img.style.transform = "scale(1.08)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = tokens.border;
-                  e.currentTarget.style.boxShadow = "none";
-                  const img = e.currentTarget.querySelector("[data-case-img]");
-                  if (img) img.style.transform = "scale(1)";
-                }}
-              >
-                {/* Image area */}
-                <div style={{ overflow: "hidden", position: "relative" }}>
-                  <div data-case-img style={{
-                    height: 220,
-                    background: `linear-gradient(135deg, ${c.color}18, ${c.color}06, ${tokens.card})`,
-                    display: "flex", alignItems: "center", justifyContent: "center",
-                    transition: "transform 0.6s ease", position: "relative",
-                  }}>
-                    {c.image ? (
-                      <img
-                        src={c.image}
-                        alt={c.name}
-                        style={{
-                          width: "100%", height: "100%",
-                          objectFit: "cover", objectPosition: "top",
-                          display: "block",
-                        }}
-                      />
-                    ) : (
-                      <>
-                        <span style={{
-                          fontFamily: tokens.font, fontWeight: 800, fontSize: 80,
-                          color: c.color + "15", letterSpacing: "-0.05em",
-                        }}>{c.name[0]}</span>
-                        <div style={{
-                          position: "absolute", top: 16, right: 16,
-                          width: 40, height: 40, border: `1px solid ${c.color}22`,
-                          borderRadius: 10, transform: "rotate(15deg)",
-                        }} />
-                        <div style={{
-                          position: "absolute", bottom: 20, left: 20,
-                          width: 24, height: 24, borderRadius: "50%",
-                          background: `${c.color}11`, border: `1px solid ${c.color}18`,
-                        }} />
-                      </>
-                    )}
-                  </div>
-                </div>
-
-                {/* Content */}
+              onMouseEnter={e => {
+                e.currentTarget.style.borderColor = c.accentColor + "44";
+                e.currentTarget.style.boxShadow = `0 8px 32px ${c.accentColor}14`;
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.borderColor = tokens.border;
+                e.currentTarget.style.boxShadow = "none";
+              }}
+            >
+              {/* Header: icon + name + desc */}
+              <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
                 <div style={{
-                  padding: "28px 28px 32px", flex: 1,
-                  display: "flex", flexDirection: "column",
+                  width: 48, height: 48, borderRadius: 14,
+                  background: c.iconBg + "22",
+                  border: `1px solid ${c.iconBg}33`,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  fontSize: 22, flexShrink: 0,
                 }}>
-                  <span style={{
-                    fontFamily: tokens.fontBody, fontSize: 12, fontWeight: 600,
-                    color: c.color, textTransform: "uppercase",
-                    letterSpacing: "0.08em", marginBottom: 10,
-                  }}>{c.tag}</span>
+                  {c.icon}
+                </div>
+                <div>
                   <h3 style={{
-                    fontFamily: tokens.font, fontWeight: 700, fontSize: 24,
-                    color: tokens.white, marginBottom: 12,
-                    letterSpacing: "-0.02em",
+                    fontFamily: tokens.font, fontWeight: 700, fontSize: 18,
+                    color: tokens.white, letterSpacing: "-0.02em",
+                    marginBottom: 4,
                   }}>{c.name}</h3>
                   <p style={{
-                    fontFamily: tokens.fontBody, fontSize: 14, color: tokens.gray,
-                    lineHeight: 1.6, marginBottom: 24, flex: 1,
+                    fontFamily: tokens.fontBody, fontSize: 13,
+                    color: tokens.gray, lineHeight: 1.5,
                   }}>{c.desc}</p>
-                  <span style={{
-                    fontFamily: tokens.fontBody, fontSize: 14, fontWeight: 600,
-                    color: tokens.white,
-                    display: "inline-flex", alignItems: "center", gap: 8,
-                  }}>
-                    {c.link !== "#" ? "View live →" : "Case study"} <span style={{ color: c.color }}>→</span>
-                  </span>
                 </div>
               </div>
-              </a>
-            </TiltCard>
+
+              {/* Tech tags */}
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                {c.tags.map((tag, ti) => (
+                  <span key={ti} style={{
+                    fontFamily: tokens.fontBody, fontSize: 12, fontWeight: 600,
+                    color: tag.color, background: tag.bg,
+                    border: `1px solid ${tag.color}30`,
+                    borderRadius: 6, padding: "4px 10px",
+                    letterSpacing: "0.04em",
+                  }}>{tag.label}</span>
+                ))}
+              </div>
+
+              {/* Divider */}
+              <div style={{ height: 1, background: tokens.border }} />
+
+              {/* Stats row */}
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}>
+                {c.stats.map((stat, si) => (
+                  <div key={si} style={{ textAlign: "center", flex: 1 }}>
+                    <div style={{
+                      fontFamily: tokens.font, fontWeight: 700, fontSize: 15,
+                      color: tokens.white, letterSpacing: "-0.01em",
+                    }}>{stat.value}</div>
+                    <div style={{
+                      fontFamily: tokens.fontBody, fontSize: 11,
+                      color: tokens.gray, marginTop: 2,
+                    }}>{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Divider */}
+              <div style={{ height: 1, background: tokens.border }} />
+
+              {/* Action buttons */}
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
+                  <a href={c.demoLink} target="_blank" rel="noopener noreferrer" style={{
+                    textDecoration: "none",
+                    background: c.accentColor,
+                    color: "#000",
+                    fontFamily: tokens.fontBody,
+                    fontWeight: 700,
+                    fontSize: 13,
+                    padding: "10px 22px",
+                    borderRadius: 10,
+                    letterSpacing: "0.01em",
+                    transition: "opacity 0.2s",
+                    flex: 1,
+                    textAlign: "center",
+                    display: "block",
+                  }}
+                    onMouseEnter={e => e.currentTarget.style.opacity = "0.85"}
+                    onMouseLeave={e => e.currentTarget.style.opacity = "1"}
+                  >{c.btnLabel}</a>
+
+                {c.liveLink !== "#" ? (
+                  <a href={c.liveLink} target="_blank" rel="noopener noreferrer" style={{
+                    textDecoration: "none",
+                    fontFamily: tokens.fontBody, fontWeight: 600, fontSize: 13,
+                    color: tokens.white,
+                    border: `1px solid ${tokens.borderLight}`,
+                    padding: "10px 18px",
+                    borderRadius: 10,
+                    display: "inline-flex", alignItems: "center", gap: 6,
+                    transition: "border-color 0.2s, color 0.2s",
+                    whiteSpace: "nowrap",
+                  }}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.borderColor = c.accentColor + "66";
+                      e.currentTarget.style.color = c.accentColor;
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.borderColor = tokens.borderLight;
+                      e.currentTarget.style.color = tokens.white;
+                    }}
+                  >Open <span style={{ fontSize: 14 }}>↗</span></a>
+                ) : (
+                  <span style={{
+                    fontFamily: tokens.fontBody, fontWeight: 600, fontSize: 13,
+                    color: tokens.gray,
+                    border: `1px solid ${tokens.border}`,
+                    padding: "10px 18px",
+                    borderRadius: 10,
+                    display: "inline-flex", alignItems: "center", gap: 6,
+                    whiteSpace: "nowrap",
+                  }}>Open <span style={{ fontSize: 14 }}>↗</span></span>
+                )}
+              </div>
+            </div>
           </FadeUp>
         ))}
       </div>
