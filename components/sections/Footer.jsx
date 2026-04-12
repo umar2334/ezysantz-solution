@@ -65,7 +65,7 @@ export default function Footer() {
             }}>Ezysantz Solution</span>
           </a>
 
-          <a href="mailto:hello@outcrowd.io" style={{
+          <a href="mailto:hello@ezysantz.com" style={{
             fontFamily: tokens.fontBody, fontSize: 15, color: tokens.gray,
             textDecoration: "none", transition: "color 0.3s",
           }}

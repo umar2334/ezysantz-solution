@@ -81,7 +81,7 @@ export default function Hero() {
           <span style={{
             fontFamily: tokens.fontBody, fontSize: 13, color: tokens.accent,
             textTransform: "uppercase", letterSpacing: "0.12em", fontWeight: 600,
-          }}>Software Agency — Islamabad, Pakistan</span>
+          }}>Premium Product Studio — Islamabad, Pakistan</span>
         </div>
       </div>
 
@@ -94,13 +94,13 @@ export default function Hero() {
         transform: loaded ? "translateY(0)" : "translateY(40px)",
         transition: `all 1s 0.35s ${tokens.ease}`,
       }}>
-        Web &amp; Mobile Apps<br />
-        Built for<br />
+        We Engineer Digital<br />
+        Products That Turn<br />
         <span style={{
           background: `linear-gradient(135deg, ${tokens.accent}, #a0e000)`,
           WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
           backgroundClip: "text",
-        }}>Your Business</span>
+        }}>Startups Into Leaders</span>
       </h1>
 
       {/* Subtitle */}
@@ -112,8 +112,8 @@ export default function Hero() {
         transform: loaded ? "translateY(0)" : "translateY(30px)",
         transition: `all 0.9s 0.55s ${tokens.ease}`,
       }}>
-        Full Stack Development, Mobile Apps, WordPress & Cloud Solutions —
-        delivered by a trusted software agency based in Pakistan
+        We don't write code — we solve expensive business problems.
+        Flutter · React · Firebase · WordPress delivered in 6 weeks, flat-rate.
       </p>
 
       {/* CTA Buttons */}

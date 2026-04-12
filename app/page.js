@@ -10,12 +10,15 @@ import {
   Stats,
   Stages,
   Services,
+  Packages,
   LogoSection,
   Cases,
+  Lab,
   Testimonials,
   Awards,
   FAQ,
   CTA,
+  StickyBookCall,
   Footer,
 } from "@/components/sections";
 
@@ -62,12 +65,15 @@ export default function Home() {
         <Stats />
         <Stages />
         <Services />
+        <Packages />
         <LogoSection />
         <Cases />
+        <Lab />
         <Testimonials />
         <Awards />
         <FAQ />
         <CTA />
+        <StickyBookCall />
         <Footer />
       </div>
     </div>

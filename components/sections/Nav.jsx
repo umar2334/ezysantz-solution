@@ -15,8 +15,8 @@ import { tokens } from "@/styles/tokens";
 
 const NAV_ITEMS = [
   { label: "Cases", href: "/cases" },
-  { label: "Service", href: "/services" },
-  // { label: "Blog", href: "/blog" },
+  { label: "Services", href: "/services" },
+  { label: "Packages", href: "/packages" },
   { label: "About us", href: "/about-us" },
 ];
 
@@ -352,7 +352,7 @@ export default function Nav() {
         }}>
           {/* Email */}
           <a
-            href="mailto:hello@outcrowd.io"
+            href="mailto:hello@ezysantz.com"
             style={{
               fontFamily: tokens.fontBody,
               fontSize: 16,
@@ -365,7 +365,7 @@ export default function Nav() {
             onMouseEnter={(e) => (e.target.style.color = tokens.accent)}
             onMouseLeave={(e) => (e.target.style.color = tokens.grayLight)}
           >
-            hello@outcrowd.io
+            hello@ezysantz.com
           </a>
 
           {/* Social icons row */}
