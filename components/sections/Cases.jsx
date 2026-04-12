@@ -24,7 +24,7 @@ const CASES = [
     btnLabel: "View Demo",
     demoLink: "https://apnnacv.vercel.app/",
     githubLink: null,
-    image: "/projects/apnacv.png",
+    image: "/projects/apnacv-mockup.webp",
     accentColor: "#6366f1",
   },
   {
@@ -47,7 +47,7 @@ const CASES = [
     btnLabel: "View Demo",
     demoLink: "https://personal-finance-visualizer-ochre-psi.vercel.app/",
     githubLink: null,
-    image: "/projects/finance.png",
+    image: "/projects/finance-mockup.webp",
     accentColor: "#22c55e",
   },
   {
@@ -70,7 +70,7 @@ const CASES = [
     btnLabel: "View Demo",
     demoLink: "https://umar2334.github.io/project-1-umar-store/",
     githubLink: "https://github.com/umar2334/project-1-umar-store",
-    image: null,
+    image: "/projects/ecommerce-mockup.webp",
     accentColor: "#0ea5e9",
   },
   {
@@ -93,7 +93,7 @@ const CASES = [
     btnLabel: "Download APK",
     demoLink: "https://github.com/umar2334/Ghumo/releases/download/v1.0.0/Ghumo-v1.0.0.apk",
     githubLink: "https://github.com/umar2334/Ghumo",
-    image: null,
+    image: "/projects/ghumo-mockup.webp",
     accentColor: "#f59e0b",
   },
   {
@@ -116,7 +116,7 @@ const CASES = [
     btnLabel: "Download APK",
     demoLink: "https://github.com/umar2334/society-managment-app/releases/download/v1.0.27/society-management-v1.0.27.apk",
     githubLink: "https://github.com/umar2334/society-managment-app",
-    image: null,
+    image: "/projects/society-mockup.webp",
     accentColor: "#3b82f6",
   },
 ];
