@@ -155,17 +155,29 @@ function ProjectModal({ project, onClose }) {
         }}
       >
         {/* Image / Header */}
-        <div style={{ position: "relative", height: 200, overflow: "hidden", borderRadius: "20px 20px 0 0" }}>
+        <div style={{
+          position: "relative", height: 280, overflow: "hidden",
+          borderRadius: "20px 20px 0 0",
+          background: `linear-gradient(160deg, ${project.accentColor}18, #0a0a0d 70%)`,
+          display: "flex", alignItems: "center", justifyContent: "center",
+          perspective: "800px",
+        }}>
           {project.image ? (
             <img
               src={project.image}
               alt={project.name}
-              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }}
+              style={{
+                width: "88%", height: "90%",
+                objectFit: "contain", display: "block",
+                transform: "rotateX(6deg) rotateY(-4deg) scale(1.04)",
+                transformOrigin: "center bottom",
+                filter: `drop-shadow(0 24px 40px ${project.accentColor}44) drop-shadow(0 8px 16px rgba(0,0,0,0.6))`,
+                transition: "transform 0.4s ease",
+              }}
             />
           ) : (
             <div style={{
               width: "100%", height: "100%",
-              background: `linear-gradient(135deg, ${project.accentColor}22, ${project.accentColor}08, #131316)`,
               display: "flex", alignItems: "center", justifyContent: "center",
               fontSize: 64,
             }}>
