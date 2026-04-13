@@ -131,6 +131,65 @@ export default function Footer() {
         ))}
       </div>
 
+      {/* Ventures by Zysantz */}
+      <div style={{
+        marginBottom: 32,
+        padding: "24px 28px",
+        background: tokens.bgAlt,
+        border: `1px solid ${tokens.border}`,
+        borderRadius: 16,
+      }}>
+        <p style={{
+          fontFamily: tokens.fontBody, fontSize: 11, fontWeight: 700,
+          color: tokens.grayDark, textTransform: "uppercase",
+          letterSpacing: "0.1em", marginBottom: 16,
+        }}>Ventures by Zysantz</p>
+        <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+          <a
+            href="https://www.turkdrama.live"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              textDecoration: "none",
+              display: "inline-flex", alignItems: "center", gap: 8,
+              background: "#8b5cf618",
+              border: "1px solid #8b5cf630",
+              borderRadius: 10, padding: "8px 16px",
+              transition: "border-color 0.2s",
+            }}
+            onMouseEnter={e => e.currentTarget.style.borderColor = "#8b5cf666"}
+            onMouseLeave={e => e.currentTarget.style.borderColor = "#8b5cf630"}
+          >
+            <span style={{ fontSize: 16 }}>🎬</span>
+            <div>
+              <div style={{ fontFamily: tokens.fontBody, fontWeight: 700, fontSize: 13, color: tokens.white }}>TurkVerse</div>
+              <div style={{ fontFamily: tokens.fontBody, fontSize: 11, color: tokens.gray }}>Turkish Drama Portal</div>
+            </div>
+          </a>
+          <a
+            href="https://apnnacv.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              textDecoration: "none",
+              display: "inline-flex", alignItems: "center", gap: 8,
+              background: "#6366f118",
+              border: "1px solid #6366f130",
+              borderRadius: 10, padding: "8px 16px",
+              transition: "border-color 0.2s",
+            }}
+            onMouseEnter={e => e.currentTarget.style.borderColor = "#6366f166"}
+            onMouseLeave={e => e.currentTarget.style.borderColor = "#6366f130"}
+          >
+            <span style={{ fontSize: 16 }}>📄</span>
+            <div>
+              <div style={{ fontFamily: tokens.fontBody, fontWeight: 700, fontSize: 13, color: tokens.white }}>APNNCV</div>
+              <div style={{ fontFamily: tokens.fontBody, fontSize: 11, color: tokens.gray }}>Resume Builder SaaS</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
       {/* Bottom bar */}
       <div style={{
         display: "flex", justifyContent: "space-between", alignItems: "center",
@@ -140,12 +199,12 @@ export default function Footer() {
         <span style={{
           fontFamily: tokens.fontBody, fontSize: 13, color: tokens.grayDark,
         }}>
-          Copyright © 2026 Ezsyantz-Solution. All rights reserved.
+          Copyright © 2026 Ezysantz Solution. All rights reserved.
         </span>
         <span style={{
           fontFamily: tokens.fontBody, fontSize: 13, color: tokens.grayDark,
         }}>
-          Islamabad— PAKISTAN
+          Islamabad — PAKISTAN
         </span>
       </div>
     </footer>

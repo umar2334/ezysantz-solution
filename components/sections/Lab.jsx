@@ -21,16 +21,17 @@ const LAB_PROJECTS = [
   {
     icon: "🎬",
     iconBg: "#8b5cf6",
-    name: "Turkish Series Blog",
-    tagline: "High-Traffic Media Platform for Drama Fans",
-    desc: "A Next.js-powered content platform serving thousands of daily visitors — fully SEO-optimized with SSG, WebP images, and structured data. Proof we understand high-concurrency at scale.",
+    name: "TurkVerse",
+    tagline: "High-Traffic Turkish Drama Portal — Live & Scaling",
+    desc: "A Next.js-powered media portal dedicated to Turkish dramas — fully SEO-optimized with SSR/SSG, real-time content delivery, and optimized image loading. Scaled to 12+ active users within 24 hours of launch.",
     metrics: [
-      { value: "Next.js", label: "SSG/SSR" },
+      { value: "12+", label: "Users Day 1" },
       { value: "SEO", label: "Optimized" },
-      { value: "Scale", label: "Ready" },
+      { value: "Live", label: "& Scaling" },
     ],
-    status: "Coming Soon",
-    statusColor: "#f59e0b",
+    status: "Live",
+    statusColor: "#22c55e",
+    link: "https://www.turkdrama.live",
     accentColor: "#8b5cf6",
   },
 ];
@@ -162,6 +163,27 @@ export default function Lab() {
                   </div>
                 ))}
               </div>
+
+              {/* Live link if available */}
+              {proj.link && (
+                <a
+                  href={proj.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    textDecoration: "none",
+                    display: "inline-flex", alignItems: "center", gap: 8,
+                    background: proj.accentColor,
+                    color: "#fff",
+                    fontFamily: tokens.fontBody, fontWeight: 700, fontSize: 13,
+                    padding: "10px 20px", borderRadius: 10,
+                    transition: "opacity 0.2s",
+                    alignSelf: "flex-start",
+                  }}
+                  onMouseEnter={e => e.currentTarget.style.opacity = "0.85"}
+                  onMouseLeave={e => e.currentTarget.style.opacity = "1"}
+                >View Live Project ↗</a>
+              )}
             </div>
           </FadeUp>
         ))}

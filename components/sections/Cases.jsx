@@ -119,6 +119,29 @@ const CASES = [
     image: "/projects/society-mockup.webp",
     accentColor: "#3b82f6",
   },
+  {
+    icon: "🎬",
+    iconBg: "#8b5cf6",
+    name: "TurkVerse",
+    desc: "High-traffic Turkish drama portal — scaled to 12+ active users within 24 hours of launch.",
+    fullDesc: "Challenge: Turkish drama fans had no dedicated high-performance platform for news and episode updates. Solution: Built a Next.js media portal with SSR/SSG, real-time SEO strategies, and optimized image delivery. Impact: Scaled to 12+ real-time active users within 24 hours of launch — proving our content-driven engineering model.",
+    features: ["Next.js SSR/SSG Architecture", "Real-Time SEO Optimization", "Optimized Image Loading", "Scaled to 12+ Users in 24hrs"],
+    tags: [
+      { label: "Next.js", color: "#8b5cf6", bg: "#8b5cf618" },
+      { label: "SEO", color: "#22c55e", bg: "#22c55e18" },
+      { label: "Media", color: "#f97316", bg: "#f9731618" },
+    ],
+    stats: [
+      { value: "12+", label: "Users Day 1" },
+      { value: "SEO", label: "Optimized" },
+      { value: "Live", label: "Platform" },
+    ],
+    btnLabel: "View Live Project",
+    demoLink: "https://www.turkdrama.live",
+    githubLink: null,
+    image: null,
+    accentColor: "#8b5cf6",
+  },
 ];
 
 function ProjectModal({ project, onClose }) {
