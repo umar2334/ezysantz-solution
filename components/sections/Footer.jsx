@@ -187,6 +187,27 @@ export default function Footer() {
               <div style={{ fontFamily: tokens.fontBody, fontSize: 11, color: tokens.gray }}>Resume Builder SaaS</div>
             </div>
           </a>
+          <a
+            href="https://leadhunter-pro-pied.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              textDecoration: "none",
+              display: "inline-flex", alignItems: "center", gap: 8,
+              background: "#6366f118",
+              border: "1px solid #6366f130",
+              borderRadius: 10, padding: "8px 16px",
+              transition: "border-color 0.2s",
+            }}
+            onMouseEnter={e => e.currentTarget.style.borderColor = "#6366f166"}
+            onMouseLeave={e => e.currentTarget.style.borderColor = "#6366f130"}
+          >
+            <span style={{ fontSize: 16 }}>🎯</span>
+            <div>
+              <div style={{ fontFamily: tokens.fontBody, fontWeight: 700, fontSize: 13, color: tokens.white }}>LeadHunter Pro</div>
+              <div style={{ fontFamily: tokens.fontBody, fontSize: 11, color: tokens.gray }}>AI Lead Gen SaaS</div>
+            </div>
+          </a>
         </div>
       </div>
 
